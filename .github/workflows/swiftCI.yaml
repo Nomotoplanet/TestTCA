@@ -6,54 +6,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  test:
     runs-on: macos-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Show Xcode version
-        run: xcodebuild -version
-
-      - name: Resolve packages
-        run: |
-          xcodebuild \
-            -resolvePackageDependencies \
-            -project TestTCA.xcodeproj \
-            -scheme TestTCA
-
-      - name: Build
-        run: |
-          set -o pipefail
-
-          xcodebuild \
-            -project TestTCA.xcodeproj \
-            -scheme TestTCA \
-            -destination 'generic/platform=iOS Simulator' \
-            -skipMacroValidation \
-            CODE_SIGNING_ALLOWED=NO \
-            clean build
-
-      - name: Enable Swift macros
-        run: |
-          defaults write com.apple.dt.Xcode \
-            IDESkipMacroFingerprintValidation \
-            -bool YES
-      
-          defaults write com.apple.dt.Xcode \
-            IDESkipPackagePluginFingerprintValidation \
-            -bool YES
-      
       - name: Test
         run: |
           set -o pipefail
-      
+
           xcodebuild \
             -project TestTCA.xcodeproj \
             -scheme TestTCA \
-            -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=26.5' \
+            -only-testing:TestTCATests \
             -skipMacroValidation \
-            -skipPackagePluginValidation \
             CODE_SIGNING_ALLOWED=NO \
-            test 2>&1 | tee test.log
+            test
