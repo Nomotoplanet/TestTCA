@@ -33,9 +33,34 @@
 		D63DF3753024090D0006165A /* TestTCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTCAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D63DF3EC3024521E0006165A /* Exceptions for "TestTCA" folder in "TestTCATests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContentView.swift,
+				CounterFeature.swift,
+				CounterView.swift,
+			);
+			target = D63DF36A3024090D0006165A /* TestTCATests */;
+		};
+		D63DF3ED3024521E0006165A /* Exceptions for "TestTCA" folder in "TestTCAUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContentView.swift,
+				CounterFeature.swift,
+				CounterView.swift,
+			);
+			target = D63DF3743024090D0006165A /* TestTCAUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D63DF3603024090C0006165A /* TestTCA */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D63DF3EC3024521E0006165A /* Exceptions for "TestTCA" folder in "TestTCATests" target */,
+				D63DF3ED3024521E0006165A /* Exceptions for "TestTCA" folder in "TestTCAUITests" target */,
+			);
 			path = TestTCA;
 			sourceTree = "<group>";
 		};
