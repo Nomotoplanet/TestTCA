@@ -13,20 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Show repository files
-        run: |
-          pwd
-          echo "=== Xcode projects ==="
-          find . -name "*.xcodeproj" -print
-          echo "=== Workspaces ==="
-          find . -name "*.xcworkspace" -print
-          echo "=== Top-level files ==="
-          ls -la
-
       - name: Build
         run: |
           xcodebuild \
-            -project TestTCA/TestTCA.xcodeproj \
+            -project TestTCA.xcodeproj \
             -scheme TestTCA \
-            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO \
             clean build
