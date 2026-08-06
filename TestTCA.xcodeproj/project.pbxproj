@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D63DF3B230240BC00006165A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D63DF3B130240BC00006165A /* ComposableArchitecture */; };
+		D63DF3F03024578F0006165A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D63DF3EF3024578F0006165A /* ComposableArchitecture */; };
+		D63DF3F2302457940006165A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D63DF3F1302457940006165A /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63DF3F2302457940006165A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63DF3F03024578F0006165A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +112,7 @@
 				D63DF3603024090C0006165A /* TestTCA */,
 				D63DF36E3024090D0006165A /* TestTCATests */,
 				D63DF3783024090D0006165A /* TestTCAUITests */,
+				D63DF3EE3024578F0006165A /* Frameworks */,
 				D63DF35F3024090C0006165A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +125,13 @@
 				D63DF3753024090D0006165A /* TestTCAUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D63DF3EE3024578F0006165A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +178,7 @@
 			);
 			name = TestTCATests;
 			packageProductDependencies = (
+				D63DF3F1302457940006165A /* ComposableArchitecture */,
 			);
 			productName = TestTCATests;
 			productReference = D63DF36B3024090D0006165A /* TestTCATests.xctest */;
@@ -189,6 +202,7 @@
 			);
 			name = TestTCAUITests;
 			packageProductDependencies = (
+				D63DF3EF3024578F0006165A /* ComposableArchitecture */,
 			);
 			productName = TestTCAUITests;
 			productReference = D63DF3753024090D0006165A /* TestTCAUITests.xctest */;
@@ -630,6 +644,16 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		D63DF3B130240BC00006165A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D63DF3B030240BC00006165A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		D63DF3EF3024578F0006165A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D63DF3B030240BC00006165A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		D63DF3F1302457940006165A /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D63DF3B030240BC00006165A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
