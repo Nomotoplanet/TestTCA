@@ -34,3 +34,11 @@ jobs:
             -skipMacroValidation \
             CODE_SIGNING_ALLOWED=NO \
             clean build
+
+      - name: Test
+        run: |
+          xcodebuild \
+            -project TestTCA.xcodeproj \
+            -scheme TestTCA \
+            -destination 'generic/platform=iOS Simulator' \
+            test
