@@ -39,6 +39,11 @@ struct CounterView: View {
             }) {
                 Text("リセット")
             }
+            Button(action: {
+                store.send(.increment(by: 2))
+            }) {
+                Text("+2追加")
+            }
         }
         .padding()
     }
