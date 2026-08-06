@@ -13,11 +13,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Resolve packages
+        run: |
+          xcodebuild \
+            -resolvePackageDependencies \
+            -project TestTCA.xcodeproj \
+            -scheme TestTCA
+
       - name: Build
         run: |
+          set -o pipefail
+
           xcodebuild \
             -project TestTCA.xcodeproj \
             -scheme TestTCA \
             -destination 'generic/platform=iOS Simulator' \
+            -skipMacroValidation \
             CODE_SIGNING_ALLOWED=NO \
             clean build
