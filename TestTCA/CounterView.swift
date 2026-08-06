@@ -8,7 +8,9 @@
 import SwiftUI
 import ComposableArchitecture
 
+// ビュー
 struct CounterView: View {
+    // StoreでユーザーアクションとReduceを接続
     let store: Store = Store(initialState: CounterFeature.State(), reducer: { CounterFeature() })
     var body: some View {
         VStack {
