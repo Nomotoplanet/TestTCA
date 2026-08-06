@@ -1,0 +1,22 @@
+name: Swift CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          xcodebuild \
+            -workspace MyApp.xcworkspace \
+            -scheme MyApp \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            clean build
