@@ -43,5 +43,6 @@ jobs:
             # 下のコードは、自動テストでは使えないので、具体的なシミュレータ名を指定しないといけない
             -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
             -skipMacroValidation \
+            -skipPackagePluginValidation \
             CODE_SIGNING_ALLOWED=NO \
             test
