@@ -22,6 +22,8 @@ struct CounterFeature {
         case incrementButtonTapped
         case decrementButtonTapped
         case resetButtonTapped
+        case increase(by: Int)
+        case decrease(by: Int)
     }
     
     // ビューへ公開し、ReducerでActionを処理させる
@@ -36,6 +38,12 @@ struct CounterFeature {
                 return .none
             case .resetButtonTapped:
                 state.count = 0
+                return .none
+            case .increase(by: let num):
+                state.count += num
+                return .none
+            case .decrease(by: let num):
+                state.count -= num
                 return .none
             }
         }

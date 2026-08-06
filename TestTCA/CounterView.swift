@@ -34,6 +34,20 @@ struct CounterView: View {
                 }
                 .padding()
             }
+            HStack {
+                Button(action: {
+                    store.send(.increase(by: 2))
+                }) {
+                    Text("+2")
+                }
+                .padding()
+                Button(action: {
+                    store.send(.decrease(by: 2))
+                }) {
+                    Text("-2")
+                }
+                .padding()
+            }
             Button(action: {
                 store.send(.resetButtonTapped)
             }) {
