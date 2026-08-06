@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D63DF3B230240BC00006165A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D63DF3B130240BC00006165A /* ComposableArchitecture */; };
-		D63DF3F03024578F0006165A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D63DF3EF3024578F0006165A /* ComposableArchitecture */; };
-		D63DF3F2302457940006165A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D63DF3F1302457940006165A /* ComposableArchitecture */; };
+		D63DF3F430245C3C0006165A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D63DF3F330245C3C0006165A /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +90,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D63DF3F2302457940006165A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D63DF3F03024578F0006165A /* ComposableArchitecture in Frameworks */,
+				D63DF3F430245C3C0006165A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +176,6 @@
 			);
 			name = TestTCATests;
 			packageProductDependencies = (
-				D63DF3F1302457940006165A /* ComposableArchitecture */,
 			);
 			productName = TestTCATests;
 			productReference = D63DF36B3024090D0006165A /* TestTCATests.xctest */;
@@ -202,7 +199,7 @@
 			);
 			name = TestTCAUITests;
 			packageProductDependencies = (
-				D63DF3EF3024578F0006165A /* ComposableArchitecture */,
+				D63DF3F330245C3C0006165A /* ComposableArchitecture */,
 			);
 			productName = TestTCAUITests;
 			productReference = D63DF3753024090D0006165A /* TestTCAUITests.xctest */;
@@ -454,6 +451,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,6 +486,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -639,6 +638,8 @@
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.26.1;
 			};
+			traits = (
+			);
 		};
 /* End XCRemoteSwiftPackageReference section */
 
@@ -648,12 +649,7 @@
 			package = D63DF3B030240BC00006165A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
-		D63DF3EF3024578F0006165A /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D63DF3B030240BC00006165A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
-		D63DF3F1302457940006165A /* ComposableArchitecture */ = {
+		D63DF3F330245C3C0006165A /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D63DF3B030240BC00006165A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
