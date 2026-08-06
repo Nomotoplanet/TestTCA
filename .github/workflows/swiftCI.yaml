@@ -16,7 +16,7 @@ jobs:
       - name: Build
         run: |
           xcodebuild \
-            -workspace MyApp.xcworkspace \
-            -scheme MyApp \
+            -workspace TestTCA.xcworkspace \
+            -scheme TestTCA \
             -destination 'platform=iOS Simulator,name=iPhone 16' \
             clean build
