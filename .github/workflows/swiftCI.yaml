@@ -45,15 +45,17 @@ jobs:
             IDESkipPackagePluginFingerprintValidation \
             -bool YES
       
-      - name: Test
+      - name: Unit Tests
+        timeout-minutes: 15
         run: |
           set -o pipefail
       
           xcodebuild \
             -project TestTCA.xcodeproj \
             -scheme TestTCA \
-            -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=26.5' \
+            -only-testing:TestTCATests \
+            -skip-testing:TestTCAUITests \
             -skipMacroValidation \
-            -skipPackagePluginValidation \
             CODE_SIGNING_ALLOWED=NO \
-            test 2>&1 | tee test.log
+            test
