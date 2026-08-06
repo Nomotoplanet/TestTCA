@@ -14,7 +14,7 @@ struct CounterFeature {
     // 検知可能な変数をStateで定義
     @ObservableState
     struct State {
-        var count: Int = 0
+        var count: Int = 0  // SwiftUIでいうPublishedと同じような機能
     }
     
     // ビューで行うActionをenumで定義
