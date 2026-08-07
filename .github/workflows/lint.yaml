@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Install SwiftLint
-        uses: brew install swiftlint
+        run: brew install swiftlint
 
       - name: Run SwoftLint
-        uses: swiftlint lint
+        run: swiftlint lint
         # 黄色の警告でも許さない場合は、これを追加する 
         # strictをつけると、黄色の警告でもCIが失敗するようになる
-        # uses: swiftlint lint --strict
+        # run: swiftlint lint --strict
