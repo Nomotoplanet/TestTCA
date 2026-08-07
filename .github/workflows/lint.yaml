@@ -3,7 +3,7 @@ name: SwiftLint
 on: 
   push:
     branches:
-      - main
+      - "**"
 
 jobs:
   swiftlint:
