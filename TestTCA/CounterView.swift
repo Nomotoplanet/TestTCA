@@ -57,4 +57,3 @@ struct CounterView: View {
         .padding()
     }
 }
-
