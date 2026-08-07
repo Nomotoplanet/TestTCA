@@ -50,8 +50,13 @@ analyzer_rules:
 # 無効化するルール
 disabled_rules:
   - todo
-  - trailing_whitespace
-      ignores_empty_lines: true
+  # SwiftUIでは、冗長な書き方になってしまうため、trailing closure 構文は使わないようにする
+  # 複数のクロージャを引数として渡すときに、最後のクロージャだけを () の外に出すのは禁止という意味
+  - multiple_closures_with_trailing_closure
+
+# 改行時のインデントスペースを無視する
+trailing_whitespace:
+  ignores_empty_lines: true
 
 # 行の長さ
 line_length:
@@ -93,10 +98,18 @@ identifier_name:
     error: 60
   excluded:
     - id
+    - a
+    - b
     - x
     - y
     - z
     - i
+    - by
+    - at
+    - in
+    - of
+    - on
+    - to
 
 # ネスト
 nesting:

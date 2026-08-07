@@ -8,7 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-// ビュー
+// カウンタービュー
 struct CounterView: View {
     // StoreでユーザーアクションとReduceを接続
     let store: Store = Store(initialState: CounterFeature.State(), reducer: { CounterFeature() })
@@ -57,4 +57,3 @@ struct CounterView: View {
         .padding()
     }
 }
-

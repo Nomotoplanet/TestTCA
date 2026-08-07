@@ -11,8 +11,10 @@ import Testing
 import ComposableArchitecture
 
 struct TestTCATests {
-
-    @Test func example() async throws {
+    
+    // SwiftLintのルールでマクロは、必ず改行して書く
+    @Test
+    func example() async throws {
         // Write your test here and use APIs like `#expect(...)` to check expected conditions.
         // Swift Testing Documentation
         // https://developer.apple.com/documentation/testing
@@ -29,7 +31,7 @@ struct TestTCATests {
     func decreaseBy2() async {
         let store = await Store(initialState: CounterFeature.State(), reducer: { CounterFeature() })
         await store.send(.decrease(by: 2))
-        #expect(store.count % 2 == 0)
+        #expect(store.count % 3 == 0)
     }
 
 }
