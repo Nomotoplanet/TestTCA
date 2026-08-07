@@ -142,6 +142,7 @@
 				D63DF35A3024090C0006165A /* Sources */,
 				D63DF35B3024090C0006165A /* Frameworks */,
 				D63DF35C3024090C0006165A /* Resources */,
+				D64CE40A30258B84007FB64E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -275,6 +276,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D64CE40A30258B84007FB64E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# if which swiftlint >/dev/null; then\n#   swiftlint autocorrect --format\n#   swiftlint\n# else\n#   echo \"warning: SwiftLint not installed. Install it with 'brew install swiftlint'\"\n# fi\n\n# 事前にパスを通しておく (brewとlocal環境の両方に対応)\nexport PATH=\"/opt/homebrew/bin:/usr/local/bin:$PATH\"\n# POSIX互換性を意識するなら、which の代わりに command -v を使う\nif command -v swiftlint >/dev/null 2>&1; then\n# 自動修正を行う場合は、これを実行\n#  swiftlint --fix\n# ただ解析してほしい場合は、これだけでいい\n  swiftlint lint\nelse\n  echo \"warning: SwiftLint not installed. Install it with 'brew install swiftlint'\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D63DF35A3024090C0006165A /* Sources */ = {
@@ -445,6 +466,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6275TDCJ6F;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -480,6 +502,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6275TDCJ6F;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
