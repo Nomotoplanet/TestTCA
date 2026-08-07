@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Github Actionsテスト
+// Github Actionsテスト (CI/CDテスト)
 struct ContentView: View {
     var body: some View {
         VStack {
