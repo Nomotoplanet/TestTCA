@@ -51,6 +51,7 @@ analyzer_rules:
 disabled_rules:
   - todo
   - trailing_whitespace
+      ignores_empty_lines: true
 
 # 行の長さ
 line_length:
