@@ -50,8 +50,10 @@ analyzer_rules:
 # 無効化するルール
 disabled_rules:
   - todo
-  - trailing_whitespace
-      ignores_empty_lines: true
+
+# 改行時のインデントスペースを無視する
+trailing_whitespace:
+  ignores_empty_lines: true
 
 # 行の長さ
 line_length:
