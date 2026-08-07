@@ -1,0 +1,23 @@
+name: SwiftLint
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  swiftlint:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Install SwiftLint
+        uses: brew install swiftlint
+
+      - name: Run SwoftLint
+        uses: swiftlint lint
+        # 黄色の警告でも許さない場合は、これを追加する 
+        # strictをつけると、黄色の警告でもCIが失敗するようになる
+        # uses: swiftlint lint --strict
