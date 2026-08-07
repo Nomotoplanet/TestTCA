@@ -9,6 +9,12 @@ import XCTest
 
 final class TestTCAUITestsLaunchTests: XCTestCase {
 
+    /*
+     SwiftLintでfinal classの場合、オーバーライドはできないのでstaticにしてくれというルールをつけたが、以下のコードはデフォルトで生成される
+     コードのため、swiftlint:disable:next static_over_final_classでルールを無視した
+    */
+    
+    // swiftlint:disable:next static_over_final_class
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
