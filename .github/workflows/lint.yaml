@@ -17,7 +17,7 @@ jobs:
         run: brew install swiftlint
 
       - name: Run SwoftLint
-        run: swiftlint lint
+        # run: swiftlint lint
         # 黄色の警告でも許さない場合は、これを追加する 
         # strictをつけると、黄色の警告でもCIが失敗するようになる
-        # run: swiftlint lint --strict
+        run: swiftlint lint --strict
