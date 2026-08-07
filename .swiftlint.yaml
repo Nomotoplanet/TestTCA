@@ -51,6 +51,7 @@ analyzer_rules:
 disabled_rules:
   - todo
   - trailing_whitespace
+      ignores_empty_lines: true
 
 # 行の長さ
 line_length:
@@ -92,10 +93,18 @@ identifier_name:
     error: 60
   excluded:
     - id
+    - a
+    - b
     - x
     - y
     - z
     - i
+    - by
+    - at
+    - in
+    - of
+    - on
+    - to
 
 # ネスト
 nesting:
